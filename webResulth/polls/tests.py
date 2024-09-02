@@ -30,6 +30,7 @@ class QuestionDetailViewTests(TestCase):
         url = reverse("polls:index", args=(past_question.id,))
         response = self.client.get(url)
         self.assertContains(response, past_question.question_text)
+   
 
 class QuestionIndexViewTests(TestCase):
     def test_no_questions(self):
